@@ -1,21 +1,87 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+import Home from './Home';
+import CreateAccount from './CreateAccount';
+import Login from './Login';
+import FillAccount from './FillAccount';
+import Homeless from './Homeless';
+import CreateHome from './CreateHome';
+import JoinHome from './JoinHome';
+import ListPage from './ListPage';
+import Checkout from './Checkout';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="ListPage">
+        <Stack.Screen 
+          name = "Home"
+          component = {Home} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+        <Stack.Screen 
+          name = "CreateAccount"
+          component = {CreateAccount} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+         <Stack.Screen 
+          name = "FillAccount"
+          component = {FillAccount} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+        <Stack.Screen 
+          name = "Login"
+          component = {Login} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+        <Stack.Screen 
+          name = "Homeless"
+          component = {Homeless} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+        <Stack.Screen 
+          name = "CreateHome"
+          component = {CreateHome} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+        <Stack.Screen 
+          name = "JoinHome"
+          component = {JoinHome} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+        <Stack.Screen 
+          name = "ListPage"
+          component = {ListPage} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+        <Stack.Screen 
+          name = "Checkout"
+          component = {Checkout} 
+          options={{
+            headerShown: false,
+          }} 
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
