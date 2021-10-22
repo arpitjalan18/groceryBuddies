@@ -6,7 +6,7 @@
   "email": "string",
   "first_name": "string",
   "last_name": "string", 
-  "group_ids": ["string"],
+  "group_id": "string",
   "image": "s3 bucket link?"
 }
 
@@ -19,11 +19,12 @@
 
 "item": {
   "name": "string",
+  "notes": "string",
+  "id": "string",
   "user_list": [{
     "user_id": "string",
     "amount_wanted": "int",
     "units": "string",
-    "notes": "string",
   }]
 }
 ```
